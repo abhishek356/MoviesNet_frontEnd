@@ -13,9 +13,11 @@
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.15.19",
     "@repo/ui": "*",
+    "axios": "^1.7.2",
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "recoil": "^0.7.7"
   },
   "devDependencies": {
     "@types/node": "^20",

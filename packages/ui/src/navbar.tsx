@@ -15,11 +15,13 @@ let Search = styled('div')(({theme})=>({
 
     position:'relative',
     borderRadius :theme.shape.borderRadius,
-    borderColor:'black',
-    backgroundColor: alpha(theme.palette.common.black, 0.15),
+   // borderColor:'black',
+   //backgroundColor:'rgba(0,0,0,0.4)',
+
+    backgroundColor: alpha(theme.palette.common.white, 0.15),
 
     '&:hover': {
-      backgroundColor: alpha(theme.palette.common.black, 0.25),
+      backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
   
     marginLeft:'0',
@@ -45,6 +47,9 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',
     width: '100%',
+    //Added below backgroundColor line
+    backgroundColor:'rgba(0,0,0,0.4)',
+
     '& .MuiInputBase-input': {
       padding: theme.spacing(1, 1, 1, 0),
       // vertical padding + font size from searchIcon
@@ -72,11 +77,14 @@ let Navbar = ()=>{
 
 return (
     <>
-   <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{
+   <Box sx={{ flexGrow: 1 ,
+
+   }}>
+      <AppBar position="fixed" sx={{
                 
       //  boxShadow:'',
-        backgroundColor:'white',
+        
+        backgroundColor:'rgba(0,0,0,0.4)',
         borderColor:'black',
         borderBottom: '3px',
 
@@ -104,7 +112,7 @@ return (
             <Typography variant={'h5'} sx={{
               // border:'1px solid',
               // borderColor:'black',
-              color:'black'
+              color:'#f8da5b'
             }}>MoviesNet</Typography>
 
 
@@ -112,7 +120,7 @@ return (
             sx={{
            //   border:'1px solid',
              // borderColor:'black',
-              color:'black'
+              color:'#f8da5b'
             }} 
             
             onClick={()=>{alert('Home')}}
@@ -125,7 +133,7 @@ return (
             <Link component='button' sx={{
               //  border:'1px solid',
               //  borderColor:'black',
-               color:'black'
+               color:'#f8da5b'
               }}
               
               underline={'none'}
@@ -134,7 +142,7 @@ return (
             <Link component='button' sx={{
               //  border:'1px solid',
               //  borderColor:'black',
-               color:'black'
+               color:'#f8da5b'
                
               }}
               underline={'none'}
