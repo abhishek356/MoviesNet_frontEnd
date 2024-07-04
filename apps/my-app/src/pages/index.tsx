@@ -22,7 +22,9 @@ export default function Home() {
   return (
     <>
     <Box sx = {{
-      backgroundColor:'#2a2438'
+      backgroundColor:'#2a2438',
+      fontSize:'62.5%',
+
     }}>
     <Navbar/>
     <MainContent/>
