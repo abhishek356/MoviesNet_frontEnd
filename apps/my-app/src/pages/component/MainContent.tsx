@@ -17,10 +17,13 @@ import  MovieList from './MovieList'
         width:'100%',
         height:'100%',
         display:'flex',
+        margin:'0',
+        padding:'0',
         
         justifyContent:'center',
         alignItems:'center',
-        fontSize:'2.1rem'
+        fontSize:'2.1rem',
+        position:'relative'
     }}>
         <div style={{
            
@@ -33,6 +36,8 @@ import  MovieList from './MovieList'
             backgroundSize:'cover',
             display:'flex',
            // justifyContent:'center'
+          // filter:'blur(2px)',
+
 
 
         }}>
@@ -45,24 +50,26 @@ import  MovieList from './MovieList'
         }}/> */}
         <Typography variant='h2' sx={{
            
-            color:'#f8da5b',
+            color:'#fcfefe',
             textAlign:'center',
-            padding:'10rem',
+            padding:'13rem',
             fontSize:'5.1rem',
             top:'50%',
             left:'50%',
             zIndex:'1',
             opacity:'1',
-          //  filter:'blur(0px)'
-          margin:'0'
+            margin:'0',
+
             
             
         }}>Your streaming guide for movies, TV shows & sports
-        <Typography variant='h6' sx={{
+        <Typography sx={{
             color:'#dbd8e3',
             zIndex:'1',
             top:'80%',
-            left:'50%'
+            left:'50%',
+            fontSize:'1.2rem',
+            marginTop:'2rem'
 
         }}>Find where to stream new, popular & upcoming entertainment with MoviesNet.</Typography>
         </Typography>
