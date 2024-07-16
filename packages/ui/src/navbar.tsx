@@ -1,5 +1,5 @@
 "use client";
-import {AppBar,Box,Link, Typography,Button,Toolbar} from '@mui/material'
+import {AppBar,Box,Link, Typography,Button,Toolbar, Container} from '@mui/material'
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 
@@ -61,7 +61,8 @@ let Navbar = ()=>{
 
 return (
     <>
-   <Box sx={{ flexGrow: 1 ,
+    <Container>
+    <Box sx={{ flexGrow: 1 ,
      // marginTop:'5.1rem'
    }}>
       <AppBar position="fixed" sx={{
@@ -249,6 +250,8 @@ return (
   </Toolbar>
       </AppBar>
     </Box>
+    </Container>
+   
     </>
 
 )

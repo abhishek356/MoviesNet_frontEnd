@@ -5,7 +5,8 @@ import { useState,useEffect } from 'react';
 import  {movies,moviesData} from '../../utilites/moviesData'
 
 import  {useRecoilValue} from  'recoil';
-import { Box } from '@mui/material';
+import { Box,Container } from '@mui/material';
+
 
 interface modifymovie {
 
@@ -27,15 +28,17 @@ console.log(`Inside the item component`,props)
 
     return( <>
 
-    {movie &&movie.poster_path ? (<Box sx={{
+        {movie &&movie.poster_path ? (<Box sx={{
         width:'500',
         heigth:'450',
+        padding:'0px 2px'
 
     }}>
 
 <img src = {movie.poster_path} width='auto'height='350' alt="movie_poster"/>
 
     </Box>):(<h3>Loading ...</h3>)}
+   
     
     </>)
 }

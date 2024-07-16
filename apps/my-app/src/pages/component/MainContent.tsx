@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import { Box, Button, Typography } from '@mui/material'
+import { Box, Button, Typography,Container } from '@mui/material'
 import {useRecoilValue} from  'recoil'
 import { moviesData } from '../../utilites/moviesData'
 import  MovieList from './MovieList'
@@ -13,6 +13,7 @@ import  MovieList from './MovieList'
 
     return(<>
     
+
     <div style={{
         width:'100%',
         height:'100%',
@@ -100,6 +101,8 @@ marginLeft:'5px',
     </div>
  
     <MovieList/>
+
+    
 
     </>)
 }
