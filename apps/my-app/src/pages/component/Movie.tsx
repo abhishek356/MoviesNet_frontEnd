@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import  {movies,moviesData} from '../../utilites/moviesData'
 
 import  {useRecoilValue} from  'recoil';
@@ -13,22 +13,27 @@ interface modifymovie {
 
 }
 
-let Movie:React.FC<modifymovie> = (items)=>{
+let Movie:React.FC<modifymovie> = ({props})=>{
 
-    let test  = {...{...items}}
-    let  [movie,setMovie] = useState<modifymovie>(items)
 
-console.log(`Inside the item component`,items)
+    useEffect(()=>{
+        setMovie(props)
+    },[props])
+
+   // let test  = {...{...items}}
+    let  [movie,setMovie] = useState<movies>(props)
+
+console.log(`Inside the item component`,props)
 
     return( <>
 
-    {movie ? (<Box sx={{
+    {movie &&movie.poster_path ? (<Box sx={{
         width:'500',
         heigth:'450',
 
     }}>
 
-<img src = {movie.props.poster_path} width='auto'height='350' alt="movie_poster"/>
+<img src = {movie.poster_path} width='auto'height='350' alt="movie_poster"/>
 
     </Box>):(<h3>Loading ...</h3>)}
     
