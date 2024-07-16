@@ -7,13 +7,18 @@ import  {movies,moviesData} from '../utilites/atoms/moviesData'
 import  {useRecoilValue} from  'recoil';
 import { Box } from '@mui/material';
 
+interface modifymovie {
 
-let Movie:React.FC<movies> = (items)=>{
+    props:movies
+
+}
+
+let Movie:React.FC<modifymovie> = (items)=>{
 
     let test  = {...{...items}}
-    let  [movie,setMovie] = useState<movies>(items)
+    let  [movie,setMovie] = useState<modifymovie>(items)
 
-console.log(`Inside the item component`,test)
+console.log(`Inside the item component`,items)
 
     return( <>
 
@@ -23,7 +28,7 @@ console.log(`Inside the item component`,test)
 
     }}>
 
-<img src = {movie.items.poster_path} width='auto'height='350' alt="movie_poster"/>
+<img src = {movie.props.poster_path} width='auto'height='350' alt="movie_poster"/>
 
     </Box>):(<h3>Loading ...</h3>)}
     

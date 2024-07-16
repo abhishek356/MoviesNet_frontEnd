@@ -21,8 +21,8 @@ return (<>
     gridTemplateColumns:'repeat(6,1fr)'
 }}>
 {movieList ? (movieList.map(movie=>{
-
-return <Movie items = {movie}/>
+//console.log(`inside the movieList  array `,movie)
+return <Movie props = {movie}/>
 
 })):
 (<h3>Loading...</h3>)}
