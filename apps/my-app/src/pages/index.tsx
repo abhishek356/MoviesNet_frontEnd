@@ -10,7 +10,7 @@ import { useEffect } from "react";
 import { LineAxisOutlined } from "@mui/icons-material";
 import {moviesData} from './utilites/atoms/moviesData';
 import {useSetRecoilState} from 'recoil'
-import { Box } from "@mui/material";
+import { Box, Typography,Button } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +28,17 @@ export default function Home() {
     }}>
     <Navbar/>
     <MainContent/>
+    <footer style  ={{
+      position:"fixed"
+    }}>
+      <Typography variant='h6'>Under the new Indian law on data protection, we inform you that
+        we save your history of pages you have visited on MoviesNet. With that data, we may
+        show you trailers on external  social  media  and video platforms.
+      </Typography>
+      <Button>I agree</Button>
+      <Button>more info</Button>
+
+    </footer>
     </Box>
     
 

@@ -3,7 +3,7 @@ import {AppBar,Box,Link, Typography,Button,Toolbar} from '@mui/material'
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 
-import SearchIcon from '@mui/icons-material/Search';
+import SearchIcon from '@mui/icons-material/SearchSharp';
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
 
@@ -11,66 +11,50 @@ import IconButton from '@mui/material/IconButton';
 
 
 
-let Search = styled('div')(({theme})=>({
-
-    position:'relative',
-    borderRadius :theme.shape.borderRadius,
-   // borderColor:'black',
-   //backgroundColor:'rgba(0,0,0,0.4)',
-
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-
-    '&:hover': {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
-    },
-  
-    marginLeft:'0',
-    width:'100%',
-
-    [theme.breakpoints.up('sm')]: {
-        marginLeft: theme.spacing(1),
-        width: 'auto',
-      },
-
-}))
+const Search = styled('div')(({ theme }) => ({
+  position: 'relative',
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  '&:hover': {
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
+   // width:'20rem',
+    //transition: 'width 0.25s linear 1s'
+  },
+  marginLeft: 0,
+  width: '100%',
+  [theme.breakpoints.up('sm')]: {
+    marginLeft: theme.spacing(1),
+    width: '20rem',
+  },
+}));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }));
-  
-  const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: 'inherit',
-    width: '100%',
-    //Added below backgroundColor line
-    backgroundColor:'rgba(0,0,0,0.4)',
+  padding: theme.spacing(0, 2),
+  height: '100%',
+  position: 'absolute',
+  pointerEvents: 'none',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundColor:'none'
+}));
 
-    '& .MuiInputBase-input': {
-      padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
-      paddingTop:'0.8em',
-      paddingLeft: `calc(2em + ${theme.spacing(4)})`,
-      transition: theme.transitions.create('width'),
-      [theme.breakpoints.up('sm')]: {
-        width: '10ch',
-        '&:focus': {
-          width: '30ch',
-        },
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  color: 'inherit',
+  width: '100%',
+  '& .MuiInputBase-input': {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create('width'),
+    [theme.breakpoints.up('sm')]: {
+      width: '30ch',
+      '&:focus': {
+        width: '30ch',
       },
     },
-  }));
-
-
-
-
-
-
-
+  },
+}));
 
 
 let Navbar = ()=>{
@@ -78,15 +62,17 @@ let Navbar = ()=>{
 return (
     <>
    <Box sx={{ flexGrow: 1 ,
-
+     // marginTop:'5.1rem'
    }}>
       <AppBar position="fixed" sx={{
                 
       //  boxShadow:'',
         
-        backgroundColor:'rgba(0,0,0,0.4)',
-        borderColor:'black',
-        borderBottom: '3px',
+        backgroundColor:'rgba(0,0,0,0)',
+        border:'none',
+        borderBottom: '0',
+        boxShadow:'none',
+        marginTop:'2.1rem'
 
       }}>
       
@@ -112,6 +98,7 @@ return (
             <Typography variant={'h5'} sx={{
               // border:'1px solid',
               // borderColor:'black',
+              fontSize:'2.0rem',
               color:'#f8da5b'
             }}>MoviesNet</Typography>
 
@@ -120,7 +107,9 @@ return (
             sx={{
            //   border:'1px solid',
              // borderColor:'black',
-              color:'#f8da5b'
+              color:'#dbd8e3',
+              fontSize:'1.3rem',
+
             }} 
             
             onClick={()=>{alert('Home')}}
@@ -133,7 +122,9 @@ return (
             <Link component='button' sx={{
               //  border:'1px solid',
               //  borderColor:'black',
-               color:'#f8da5b'
+               color:'#dbd8e3',
+               fontSize:'1.3rem',
+
               }}
               
               underline={'none'}
@@ -142,7 +133,9 @@ return (
             <Link component='button' sx={{
               //  border:'1px solid',
               //  borderColor:'black',
-               color:'#f8da5b'
+               color:'#dbd8e3',
+               fontSize:'1.3rem',
+
                
               }}
               underline={'none'}
@@ -158,7 +151,7 @@ return (
           // borderColor:'black',
           width:"45%",
           display:'flex',
-          justifyContent:"normal",
+          justifyContent:"space-between",
           alignItems:'center',
           gap:'2em'
         }}>
@@ -172,24 +165,28 @@ return (
 // border:'1px solid',
 // borderColor:'black',
 // color:'black',
-flexGrow:'2'
+//flexGrow:'1'
 
           }}>
             
             <Search sx={{
-              width:'20%',
-              height:'45px',
-              backgroundColor:'white',
-              color:'black',
-              borderColor:'black',
-              border:'1px solid'
+             // width:'5%',
+              //height:'1rem',
+              //backgroundColor:'white',
+             // padding:'1.3rem',
+              // color:'white',
+              // borderColor:'black',
+          //    border:'1px solid black',
+        ////  htmlColor:'white'
             }}>
             <SearchIconWrapper sx={{
-              
+              htmlColor:'grey'
 // border:'1px solid',
 // borderColor:'black',
             }}>
-              <SearchIcon />
+              <SearchIcon htmlColor='white' sx={{
+                //backgroundColor:'black',position:'absolute'
+                }}/>
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Find movies, TV shows and more.."
@@ -198,12 +195,19 @@ flexGrow:'2'
                 
 // border:'1px solid',
 // borderColor:'black',
+                // width:'80%',
+                // height:'2rem',
+                //marginLeft:'5rem'
+               // color:'white'
+             //  backgroundColor:'white'
               }}
             />
           </Search>
           </Box>
 
-          <Box>
+          <Box sx={{
+            gap:'20px'
+          }}>
               <Button variant={'contained'}
               size = {'large'}
               sx={{
@@ -228,6 +232,7 @@ flexGrow:'2'
                 backgroundColor:'white',
                 borderColor:'black solid',
                 borderRadius:'0px',
+                marginLeft:'5px',
                 '&:hover': {
                   backgroundColor: 'black',
                   color:'white'

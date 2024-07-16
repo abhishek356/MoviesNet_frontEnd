@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import { Box, Typography } from '@mui/material'
+import { Box, Button, Typography } from '@mui/material'
 import {useRecoilValue} from  'recoil'
 import { moviesData } from '../utilites/atoms/moviesData'
 import  MovieList from './MovieList'
@@ -19,7 +19,7 @@ import  MovieList from './MovieList'
         display:'flex',
         margin:'0',
         padding:'0',
-        
+        flexDirection:'column',
         justifyContent:'center',
         alignItems:'center',
         fontSize:'2.1rem',
@@ -54,6 +54,7 @@ import  MovieList from './MovieList'
             textAlign:'center',
             padding:'13rem',
             fontSize:'5.1rem',
+            //:'unset',
             top:'50%',
             left:'50%',
             zIndex:'1',
@@ -72,12 +73,30 @@ import  MovieList from './MovieList'
             marginTop:'2rem'
 
         }}>Find where to stream new, popular & upcoming entertainment with MoviesNet.</Typography>
-        </Typography>
+       
+       <Button variant="contained" size='large' sx={{
+        backgroundColor:'#ffc93c',
+        color:'black',
+        '&:hover':{
+            backgroundColor:'#ffa952'
+        }
+       }}>Discover Movies & TV shows</Button>
+       <Button variant = 'outlined' size = 'large' sx = {{
+color:'whitesmoke',
+borderColor:'whitesmoke',
+marginLeft:'5px',
+'&:hover':{
+    color:'#ffa952',
+    borderColor:'#ffa952'
+}
+       }}>Features</Button>
 
+
+        </Typography>
 
        
         </div>
-        
+
     </div>
  
     <MovieList/>
