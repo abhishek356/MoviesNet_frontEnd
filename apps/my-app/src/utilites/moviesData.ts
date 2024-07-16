@@ -1,3 +1,4 @@
+
 import {atom} from  'recoil'
 
 
@@ -23,4 +24,3 @@ export let moviesData = atom<movies[]>({
     key:'moviesData',
     default:undefined
 })
-

@@ -2,7 +2,7 @@
 
 
 import {useRecoilValue} from 'recoil';
-import  {movies,moviesData} from '../utilites/atoms/moviesData'
+import  {movies,moviesData} from '../../utilites/moviesData'
 import Movie from  './Movie'
 import { Box } from '@mui/material';
 

@@ -3,7 +3,7 @@
 import React from 'react'
 import { Box, Button, Typography } from '@mui/material'
 import {useRecoilValue} from  'recoil'
-import { moviesData } from '../utilites/atoms/moviesData'
+import { moviesData } from '../../utilites/moviesData'
 import  MovieList from './MovieList'
 
  let MainContent = ()=>{

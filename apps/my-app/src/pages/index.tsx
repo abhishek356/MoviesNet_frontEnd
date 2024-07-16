@@ -8,7 +8,7 @@ import Navbar from "@repo/ui/navbar"
 import MainContent from './component/MainContent'
 import { useEffect } from "react";
 import { LineAxisOutlined } from "@mui/icons-material";
-import {moviesData} from './utilites/atoms/moviesData';
+import {movies,moviesData} from '../utilites/moviesData'
 import {useSetRecoilState} from 'recoil'
 import { Box, Typography,Button } from "@mui/material";
 
