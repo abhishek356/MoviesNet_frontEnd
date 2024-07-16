@@ -22,7 +22,7 @@ return (<>
 }}>
 {movieList ? (movieList.map(movie=>{
 
-return <Movie key ={movie.id} items = {movie}/>
+return <Movie items = {movie}/>
 
 })):
 (<h3>Loading...</h3>)}

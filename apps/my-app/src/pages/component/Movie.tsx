@@ -8,11 +8,12 @@ import  {useRecoilValue} from  'recoil';
 import { Box } from '@mui/material';
 
 
-let Movie = ({items})=>{
+let Movie:React.FC<movies> = (items)=>{
 
-    let  [movie,setMovie] = useState(items)
+    let test  = {...{...items}}
+    let  [movie,setMovie] = useState<movies>(items)
 
-console.log(`Inside the item component`,items)
+console.log(`Inside the item component`,test)
 
     return( <>
 
@@ -22,7 +23,7 @@ console.log(`Inside the item component`,items)
 
     }}>
 
-<img src = {movie.poster_path} width='auto'height='350' alt="movie_poster"/>
+<img src = {movie.items.poster_path} width='auto'height='350' alt="movie_poster"/>
 
     </Box>):(<h3>Loading ...</h3>)}
     
