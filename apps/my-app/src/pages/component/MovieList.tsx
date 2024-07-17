@@ -17,9 +17,10 @@ console.log(`the value of movies is`,movieList);
 return (<>
 <Box sx={{
     display:'grid',
-    gap:'0.7em',
     columnGap:'1em',
     //gridTemplateColumns:'repeat(6,1fr)'
+    gap:'4px',
+
     gridTemplateColumns:'repeat(auto-fit,minmax(11rem,1fr))'
 
 }}>

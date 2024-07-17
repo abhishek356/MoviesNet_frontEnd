@@ -31,7 +31,6 @@ console.log(`Inside the item component`,props)
         {movie &&movie.poster_path ? (<Box sx={{
         width:'500',
         heigth:'450',
-        padding:'0px 2px'
 
     }}>
 
