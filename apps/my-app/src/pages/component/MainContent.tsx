@@ -5,6 +5,7 @@ import { Box, Button, Typography,Container } from '@mui/material'
 import {useRecoilValue} from  'recoil'
 import { moviesData } from '../../utilites/moviesData'
 import  MovieList from './MovieList'
+import Navbar from '@repo/ui/navbar'
 
  let MainContent = ()=>{
 
@@ -26,22 +27,24 @@ import  MovieList from './MovieList'
         fontSize:'2.1rem',
         position:'relative'
     }}>
+                    <Navbar/>
+
         <div style={{
            
-            maxWidth:'100%',
-            height:'auto',
+         //   maxWidth:'100%',
+            height:'100vh',
           //  filter:'blur(1px)',
             backgroundBlendMode: 'darken',
             backgroundColor:'rgba(0,0,0,0.6)',
             backgroundImage:'url(./wallpaper.jpg), linear-gradient(to bottom right, transparent, #2a2438)',
             backgroundSize:'cover',
             display:'flex',
-           // objectFit:'contain'
+            objectFit:'cover',
             
            // justifyContent:'center'
           // filter:'blur(2px)',
 
-            textAlign:'center'
+            textAlign:'center',
 
         }}>
         {/* <img src = '/wallpaper.jpg' 
@@ -51,19 +54,21 @@ import  MovieList from './MovieList'
             height:'auto',
 
         }}/> */}
+
         <Typography variant='h2' sx={{
            
             color:'#fcfefe',
             textAlign:'center',
-            padding:'13rem',
-            fontSize:'5.1rem',
+          //  padding:'13rem',
+          //  fontSize:'5.1rem',
             //:'unset',
             top:'50%',
             left:'50%',
             zIndex:'1',
             opacity:'1',
-            margin:'0',
-            
+            marginTop:'1.2em',
+            padding: { xs: '7rem', md: '10rem', lg: '8rem' },
+            fontSize: { xs: '2rem', md: '3.5rem', lg: '5rem' },
             
         }}>Your streaming guide for movies, TV shows & sports
         <Typography sx={{
@@ -71,9 +76,13 @@ import  MovieList from './MovieList'
             zIndex:'1',
             top:'80%',
             left:'50%',
-            fontSize:'1.2rem',
-            marginTop:'2rem',
-            textAlign:'center'
+           // fontSize:'1.2rem',
+           // marginTop:'2rem',
+            textAlign:'center',
+          //  color: '#dbd8e3',
+            fontSize: { xs: '1rem', md: '1.2rem' },
+            marginTop: '1rem',
+
 
         }}>Find where to stream new, popular & upcoming entertainment with MoviesNet.</Typography>
        
