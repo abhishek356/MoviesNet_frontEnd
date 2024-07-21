@@ -17,7 +17,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
 
 
-  useloadData('https://jsonfakery.com/movies/random/100');
+  useloadData('https://jsonfakery.com/movies/random/10');
 
   return (
     <>
@@ -25,7 +25,11 @@ export default function Home() {
       backgroundColor:'#2a2438',
       fontSize:'62.5%',
       margin:'0',
-      padding:'0'
+      padding:'0',
+      display:'flex',
+      flexDirection:'column',
+      justifyContent:'center',
+      alignItems:'center'
 
     }}>
     <MainContent/>

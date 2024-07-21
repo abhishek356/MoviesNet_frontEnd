@@ -6,6 +6,7 @@ import {useRecoilValue} from  'recoil'
 import { moviesData } from '../../utilites/moviesData'
 import  MovieList from './MovieList'
 import Navbar from '@repo/ui/navbar'
+import CarouselCover from './CarouselCover'
 
  let MainContent = ()=>{
 
@@ -16,8 +17,8 @@ import Navbar from '@repo/ui/navbar'
     
 
     <div style={{
-        width:'100%',
-        height:'100%',
+        width:'100vw',
+        height:'100vh',
         display:'flex',
         margin:'0',
         padding:'0',
@@ -33,6 +34,7 @@ import Navbar from '@repo/ui/navbar'
            
          //   maxWidth:'100%',
             height:'100vh',
+           // width:'',
           //  filter:'blur(1px)',
             backgroundBlendMode: 'darken',
             backgroundColor:'rgba(0,0,0,0.6)',
